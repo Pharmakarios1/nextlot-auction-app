@@ -106,7 +106,7 @@ export default function BidDetailPage() {
                 disabled={bid.status !== 'live'}
                 onClick={onPlaceBid}
                 text="Place Bid"
-                link="/bid"
+                link="/bids"
               />
               <Button variant="ghost" size="icon">
                 <Heart size={18} />
