@@ -58,7 +58,7 @@ export default function BidListing() {
       </div>
 
       {/* Grid of BidCards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-2.5">
         {filteredBids.map((bid, i) => (
           <BidCard key={i} {...bid} />
         ))}
