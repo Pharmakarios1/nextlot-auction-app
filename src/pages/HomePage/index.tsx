@@ -11,7 +11,7 @@ import PartnersCarousel from './Partners/index.js'
 
 const Home = () => {
   return (
-    <main className="main-layout my-10">
+    <main className="my-10">
       <CustomCarousel />
       <Hero />
       <BidsPage />

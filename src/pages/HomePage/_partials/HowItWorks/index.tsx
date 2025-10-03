@@ -39,7 +39,7 @@ export default function HowItWorksTabs() {
   const progress = (currentIndex / steps.length) * 100
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-slate-900">
+   
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-10 text-gradient">How It Works</h2>
 
@@ -88,6 +88,6 @@ export default function HowItWorksTabs() {
           ))}
         </Tabs>
       </div>
-    </section>
+
   )
 }
