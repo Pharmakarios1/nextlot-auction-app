@@ -1,6 +1,8 @@
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel.js'
 import Autoplay from 'embla-carousel-autoplay'
-// import { Card, CardContent } from '../ui/card.js'
+
+
+
 
 const CustomCarousel = () => {
   const AuctoCarousel = [
@@ -36,7 +38,7 @@ const CustomCarousel = () => {
       }}
       plugins={[Autoplay({ delay: 5000 })]}
       orientation="vertical"
-      className="w-full mx-auto max-w-[768px]   px-5 "
+      className="w-full mx-auto max-w-[768px]  px-5 "
     >
       <CarouselContent className="max-h-48  text-center">
         {AuctoCarousel.map((_, index) => (
