@@ -36,7 +36,7 @@ const CustomCarousel = () => {
       }}
       plugins={[Autoplay({ delay: 5000 })]}
       orientation="vertical"
-      className="w-full mx-auto max-w-[768px] mt-28  px-5 "
+      className="w-full mx-auto max-w-[768px]   px-5 "
     >
       <CarouselContent className="max-h-48  text-center">
         {AuctoCarousel.map((_, index) => (

@@ -4,7 +4,7 @@ import { Pagination } from '@/components/ui/pagination.js'
 
 const Bidboard = () => {
   return (
-    <div className="main-layout mt-20">
+    <div className="">
       <BidsPage />
       <Separator />
       <Pagination />

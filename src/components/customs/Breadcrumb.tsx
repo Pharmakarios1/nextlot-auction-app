@@ -7,18 +7,21 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb.js"
+import useHome from "@/hooks/useHome.js"
+
 
 export default function Breadcrumbs() {
   const location = useLocation()
   const paths = location.pathname.split("/").filter(Boolean)
+  const {isHome}=useHome()
 
   return (
-    <Breadcrumb className="border-red-600">
+    <Breadcrumb className="bg-black w-fit p-1 rounded-md mt-10">
       <BreadcrumbList>
         {/* Home link */}
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            <Link to="/">Home</Link>
+           {isHome? "": <Link to="/">Home</Link>}
           </BreadcrumbLink>
         </BreadcrumbItem>
 

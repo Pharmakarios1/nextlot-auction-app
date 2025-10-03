@@ -9,19 +9,19 @@ const Hero = () => {
         Nextlot is the future of digital auctions, merging technology, transparency, and trust into
         every bidding experience worldwide.
       </p>
-      <div className="flex flex-col justify-center gap-5 md:flex-row items-center my-5 md:my-12 ">
+      <div className="flex flex-col justify-center gap-5 md:flex-row items-center my-5 md:my-12  w-[80%] md:max-w-1/2 mx-auto">
         <CustomButton
           variant="default"
-          className="bg-gradient  min-w-1/2"
+          className="bg-gradient w-full"
           text="  Bid Now!"
-          link="/bid"
+          link="/bidlisting"
           icons={<ArrowRight />}
         />
         <CustomButton
           variant="default"
-          className="bg-gradient  min-w-1/2"
+          className="bg-gradient w-full "
           text=" Compare Bids"
-          link="/compare"
+          link="/lotmatch"
           icons={<Scale />}
         />
       </div>

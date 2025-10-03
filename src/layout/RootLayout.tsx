@@ -7,7 +7,7 @@ const RootLayout = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className='main-layout'>
        <Breadcrumbs/>
         <Outlet />
       </main>

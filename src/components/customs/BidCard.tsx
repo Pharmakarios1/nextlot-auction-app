@@ -108,10 +108,10 @@ const BidCard = ({
           disabled={status !== 'live'}
           onClick={onPlaceBid}
           text="Place Bid"
-          link="/bids"
+          link="/bidlisting"
         />
 
-        <Button variant="ghost" size="icon" onClick={() => navigate(`/bids/${id}`)}>
+        <Button variant="ghost" size="icon" onClick={() => navigate(`/bidlisting/${id}`)}>
           <InfoIcon />
         </Button>
 

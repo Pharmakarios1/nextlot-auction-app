@@ -3,14 +3,13 @@ import RootLayout from './layout/RootLayout.js'
 import Home from './pages/HomePage/Home.js'
 import About from './pages/About.js'
 import Bidboard from './pages/BidPage/index.js'
-import Compare from './pages/Compare.js'
 import Login from './pages/Auth/Login.js'
 import Signup from './pages/Auth/Signup.js'
 import Dashboard from './pages/UserDashboard/Dashboard.js'
 import { SignedIn, SignedOut } from '@clerk/clerk-react'
-import BidsPage from './pages/BidPage/_partials/BidListing/index.js'
 import BidDetailPage from './pages/BidPage/_partials/BidDetailPage/Index.js'
 import PlaceBid from './pages/BidPage/_partials/PlaceBid/PlaceBid.js'
+import LotMatch from './pages/LotMatch/index.js'
 
 const router = createBrowserRouter([
   {
@@ -19,8 +18,16 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'about', element: <About /> },
-      { path: '/bidboard', element: <Bidboard /> },
-      { path: '/compare', element: <Compare /> },
+      { path: '/bidlisting', element: <Bidboard /> },
+      {
+        path: '/bidlisting/:id',
+        element: <BidDetailPage />,
+      },
+      {
+        path: '/bidlisting/bid/:id',
+        element: <PlaceBid />,
+      },
+      { path: '/lotmatch', element: <LotMatch /> },
       {
         path: '/login',
         element: (
@@ -46,14 +53,6 @@ const router = createBrowserRouter([
             <Dashboard />
           </SignedIn>
         ),
-      },
-      {
-        path: '/bids',
-        element: <PlaceBid />,
-      },
-      {
-        path: '/bids/:id',
-        element: <BidDetailPage />,
       },
     ],
   },

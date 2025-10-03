@@ -16,12 +16,12 @@ const Header = () => {
 
   const tabs = [
     { id: 'home', label: 'Home', icon: <Home size={22} />, href: '/' },
-    { id: 'bidboard', label: 'Bidboard', icon: <Trophy size={22} />, href: '/bidboard' },
-    { id: 'lotmatch', label: 'Compare', icon: <Scale size={22} />, href: '/compare' },
+    { id: 'bidboard', label: 'Bidboard', icon: <Trophy size={22} />, href: '/bidlisting' },
+    { id: 'lotmatch', label: 'Lotmatch', icon: <Scale size={22} />, href: '/lotmatch' },
   ]
   return (
     <>
-      <header className="h-16 fixed top-0 left-0 w-full z-1  shadow-sm border-b border-gray-200 backdrop-blur-2xl ">
+      <header className="h-16 sticky top-0 left-0 z-50  shadow-sm border-b border-gray-200 backdrop-blur-2xl ">
         <div className="header-layout">
           <Link to={'/'} className="logo flex place-items-center gap-2">
             <span className="w-8 h-8 border-[1px] rounded-full grid place-content-center">

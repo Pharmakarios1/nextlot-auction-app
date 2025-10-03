@@ -31,15 +31,15 @@ export default function BidListing() {
 
   filteredBids = isHome ? filteredBids.slice(0, 4) : filteredBids.slice(0,8)
   return (
-    <div className="main-layout mx-auto py-20">
+    <div className="py-12">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 ">
-        <h1 className="text-2xl md:3xl  font-bold text-shadow-cyan-400">
+      <div className="flex text-center flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 ">
+        <h1 className={` text-2xl md:3xl  font-bold text-shadow-cyan-400`}>
           {isHome ? 'Live Auctions' : 'Auctions Listings'}
         </h1>
 
-        <div className={`flex items-center gap-2 ${isHome ? '' : 'flex-1'} `}>
-          {isHome ? ' ' : <Input type="text" placeholder="Search items..." className="w-full" />}
+        <div className={`flex justify-between items-center gap-2 ${isHome ? '' : 'flex-1'} `}>
+          {isHome ? null : <Input type="text" placeholder="Search items..." className="w-full" />}
           <Select onValueChange={(value) => setFilter(value)}>
             <SelectTrigger className="w-[150px]">
               <SelectValue placeholder="Filter by status" />
@@ -65,7 +65,7 @@ export default function BidListing() {
       </div>
 
       <div className={`my-10`}>
-       {isHome? "": <Pagination>
+       {isHome? null: <Pagination>
           <PaginationContent>
             <PaginationItem>
               <PaginationPrevious size={50} href="#" className="bg-gradient h-10" />

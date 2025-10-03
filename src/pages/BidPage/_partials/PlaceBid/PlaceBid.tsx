@@ -11,12 +11,12 @@ export default function PlaceBid() {
   const { loading, showBidUI } = useLoading(2000)
 
   return (
-    <div className="flex flex-col items-center justify-center main-layout my-20">
+    <div className="flex flex-col items-center justify-center">
       {/* Animate Skeleton Loader */}
       <AnimatePresence>
         {loading && (
           <motion.div
-            className="fixed mt-20 inset-0 flex items-center justify-center bg-white z-50"
+            className="fixed mt-14 inset-0 flex items-center justify-center bg-white dark:bg-slate-950  z-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
