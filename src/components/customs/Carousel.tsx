@@ -1,9 +1,6 @@
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel.js'
 import Autoplay from 'embla-carousel-autoplay'
 
-
-
-
 const CustomCarousel = () => {
   const AuctoCarousel = [
     {

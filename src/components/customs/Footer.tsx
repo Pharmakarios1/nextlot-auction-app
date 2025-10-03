@@ -1,28 +1,9 @@
 import { Link } from 'react-router-dom'
-import { Twitter, Linkedin, Instagram, Facebook, ArrowUp } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { Twitter, Linkedin, Instagram, Facebook } from 'lucide-react'
 
 export default function Footer() {
-  const [showButton, setShowButton] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowButton(true)
-      } else {
-        setShowButton(false)
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
-    <footer className="bg-slate-950 text-slate-300 py-10 mt-20 relative">
+    <footer className="bg-slate-950 text-slate-300 py-10 mt-20">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Brand / About */}
         <div>
@@ -120,17 +101,6 @@ export default function Footer() {
       <div className="border-t border-slate-800 mt-10 pt-6 text-center text-xs text-slate-500">
         © {new Date().getFullYear()} NextLot Auctions. All rights reserved.
       </div>
-
-      {/* Back to Top button */}
-      {showButton && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-20 right-6 bg-gradient hover:bg-gradient cursor-pointer text-white p-3 rounded-full shadow-lg transition"
-          aria-label="Back to top"
-        >
-          <ArrowUp size={20} />
-        </button>
-      )}
     </footer>
   )
 }

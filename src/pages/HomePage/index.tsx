@@ -7,7 +7,7 @@ import WhyChooseUs from './_partials/WhyChooseUS/index.js'
 import Testimonials from './_partials/Testimony/Testimony.js'
 import { CallToActionBanner, CallToActionMain } from './_partials/CallToAction/index.js'
 import NewsletterSignup from './_partials/Newsletter/index.js'
-import PartnersCarousel from './Partners/index.js'
+import PartnersCarousel from './_partials/Partners/index.js'
 
 const Home = () => {
   return (

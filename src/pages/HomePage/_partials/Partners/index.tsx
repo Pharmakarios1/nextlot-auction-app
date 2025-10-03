@@ -10,16 +10,25 @@ export default function PartnersCarousel() {
       name: 'Mastercard',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg',
     },
+    { name: 'Trust', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/3c/Trust_Logo.svg' },
     {
       name: 'Stripe',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/3/3c/Stripe_Logo%2C_revised_2016.svg',
+    },
+    {
+      name: 'Trusted Shops',
+      logo: 'https://seeklogo.com/vector-logo/620346/trusted-shops-icon.svg',
+    },
+    {
+      name: 'IBM Business Partner',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/IBM_Logo.svg',
     },
     { name: 'Amazon', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg' },
   ]
 
   return (
     <div className="max-w-6xl mx-auto px-6 text-center">
-      <h2 className="text-3xl font-bold mb-10 text-slate-800 dark:text-white text-gradient">
+      <h2 className="text-3xl font-bold mb-10 text-gradient dark:text-white text-gradient">
         Trusted by Leading Partners
       </h2>
 
@@ -35,7 +44,7 @@ export default function PartnersCarousel() {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="h-10 object-contain grayscale hover:grayscale-0 transition"
+                className="h-10 object-contain  hover:grayscale-0 transition"
               />
             </div>
           ))}
