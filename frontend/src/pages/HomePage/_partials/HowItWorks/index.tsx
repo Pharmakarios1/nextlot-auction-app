@@ -39,7 +39,7 @@ export default function HowItWorksTabs() {
   const progress = (currentIndex / steps.length) * 100
 
   return (
-    <div className="max-w-4xl mx-auto px-6">
+    <div className="max-w-4xl mx-auto px-6 mb-10">
       <h2 className="text-3xl font-bold text-center mb-10 text-gradient">How It Works</h2>
 
       {/* Step progress indicator */}
@@ -58,7 +58,7 @@ export default function HowItWorksTabs() {
       </div>
 
       <Tabs defaultValue="browse" className="w-full " onValueChange={(val) => setActiveTab(val)}>
-        <TabsList className="grid grid-cols-2 h-fit bg-gradient md:grid-cols-4 gap-2 w-full md:w-fit p-5 ">
+        <TabsList className="grid grid-cols-2 h-fit  md:grid-cols-4 gap-2 w-full md:w-fit p-5  ">
           {steps.map((step) => (
             <TabsTrigger key={step.value} value={step.value} className="">
               {step.icon}
