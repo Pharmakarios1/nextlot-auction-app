@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import RootLayout from './layout/RootLayout.js'
-import Home from './pages/HomePage/Home.js'
+import Home from './pages/HomePage/index.js'
 import About from './pages/About.js'
 import Bidboard from './pages/BidPage/index.js'
 import Login from './pages/Auth/Login.js'

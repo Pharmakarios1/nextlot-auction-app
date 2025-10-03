@@ -13,7 +13,7 @@ const Hero = () => {
         <CustomButton
           variant="default"
           className="bg-gradient w-full"
-          text="  Bid Now!"
+          text="  Browse Auctions!"
           link="/bidlisting"
           icons={<ArrowRight />}
         />

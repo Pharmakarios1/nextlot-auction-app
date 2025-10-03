@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { FiUser } from 'react-icons/fi'
 import { SiHandshakeProtocol } from 'react-icons/si'
 import { Home, Scale, Trophy } from 'lucide-react'
+import { FcAbout } from 'react-icons/fc'
 //third party library
 import { cn } from '@/lib/utils.js'
 import { Button } from '../ui/button.js'
@@ -16,15 +17,16 @@ const Header = () => {
 
   const tabs = [
     { id: 'home', label: 'Home', icon: <Home size={22} />, href: '/' },
+    { id: 'about', label: 'About', icon: <FcAbout size={22} />, href: '/about' },
     { id: 'bidboard', label: 'Bidboard', icon: <Trophy size={22} />, href: '/bidlisting' },
     { id: 'lotmatch', label: 'Lotmatch', icon: <Scale size={22} />, href: '/lotmatch' },
   ]
   return (
     <>
-      <header className="h-16 sticky top-0 left-0 z-50  shadow-sm border-b border-gray-200 backdrop-blur-2xl ">
+      <header className="h-16 sticky top-0 left-0 z-50  shadow-sm border-b-[1px] border-gray-200 dark:border-gray-500  backdrop-blur-2xl bg-white dark:bg-slate-950 ">
         <div className="header-layout">
-          <Link to={'/'} className="logo flex place-items-center gap-2">
-            <span className="w-8 h-8 border-[1px] rounded-full grid place-content-center">
+          <Link to={'/'} className="flex place-items-center gap-2">
+            <span className="w-8 h-8 border-[1px] border-gray-400  rounded-full grid place-content-center">
               <SiHandshakeProtocol className="text-green-400 text-md md:text-2xl" />
             </span>{' '}
             <p className="text-gradient text-xl ">NextLot</p>
@@ -48,18 +50,18 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-              <div className="flex place-items-center gap-3">
-        <ThemeToggle/>
-          <Button asChild variant="ghost" className="border-[1px]">
-            <Link to={'/login'}>
-              <FiUser />
-              <p className="hidden md:block">Sign In</p>
-            </Link>
-          </Button>
-              </div>
+          <div className="flex place-items-center gap-3">
+            <ThemeToggle />
+            <Button asChild variant="ghost" className="border-[1px]">
+              <Link to={'/login'}>
+                <FiUser />
+                <p className="hidden md:block">Sign In</p>
+              </Link>
+            </Button>
+          </div>
         </div>
       </header>
-      <footer className="fixed bottom-0 left-0 w-full header-layout md:hidden shadow-sm border-t border-gray-200 z-1 bg-white">
+      <footer className="fixed bottom-0 left-0 w-full header-layout md:hidden shadow-sm border-t border-gray-200 dark:border-none z-1 bg-white dark:bg-slate-950">
         <ul className="header-layout gap-3 p-2 ">
           {tabs.map((tab) => (
             <li key={tab.id}>

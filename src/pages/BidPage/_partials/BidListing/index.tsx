@@ -19,17 +19,17 @@ import {
 } from '@/components/ui/select.js'
 import BidCard from '@/components/customs/BidCard.js'
 import { bids } from '@/data/bid.js'
-import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
+import { HiOutlineAdjustmentsHorizontal } from 'react-icons/hi2'
 import useHome from '@/hooks/useHome.js'
-
+import CustomButton from '@/components/customs/CustomButton.js'
 
 export default function BidListing() {
   const [filter, setFilter] = useState('all')
-  const {isHome}=useHome()
+  const { isHome } = useHome()
 
   let filteredBids = filter === 'all' ? bids : bids.filter((b) => b.status === filter)
 
-  filteredBids = isHome ? filteredBids.slice(0, 4) : filteredBids.slice(0,8)
+  filteredBids = isHome ? filteredBids.slice(0, 4) : filteredBids.slice(0, 8)
   return (
     <div className="py-12">
       {/* Header */}
@@ -52,7 +52,7 @@ export default function BidListing() {
             </SelectContent>
           </Select>
           <Button variant="outline">
-           <HiOutlineAdjustmentsHorizontal />
+            <HiOutlineAdjustmentsHorizontal />
           </Button>
         </div>
       </div>
@@ -63,26 +63,33 @@ export default function BidListing() {
           <BidCard key={i} {...bid} />
         ))}
       </div>
+      <div className={`my-5 justify-center flex md:justify-end `}>
+        {isHome && (
+          <CustomButton text="More!" link="/bidlisting" className="bg-gradient px-6 py-0" />
+        )}
+      </div>
 
       <div className={`my-10`}>
-       {isHome? null: <Pagination>
-          <PaginationContent>
-            <PaginationItem>
-              <PaginationPrevious size={50} href="#" className="bg-gradient h-10" />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink size={25} href="#" className="bg-gradient h-5 w-5">
-                1
-              </PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationEllipsis />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationNext size={25} href="#" className="bg-gradient h-10" />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>}
+        {isHome ? null : (
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious size={50} href="#" className="bg-gradient h-10" />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink size={25} href="#" className="bg-gradient h-5 w-5">
+                  1
+                </PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationEllipsis />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationNext size={25} href="#" className="bg-gradient h-10" />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        )}
       </div>
     </div>
   )

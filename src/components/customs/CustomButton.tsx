@@ -9,7 +9,7 @@ interface BtnProps {
   text: string
   link?: string
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'
-  className: string
+  className?: string
   disabled?: boolean
 }
 

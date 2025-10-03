@@ -1,7 +1,6 @@
-import { Moon, Sun } from "lucide-react"
-import { Button } from "@/components/ui/button.js"
-import { useTheme } from "./ThemeContext.js"
-
+import { Moon, Sun } from 'lucide-react'
+import { Button } from '@/components/ui/button.js'
+import { useTheme } from './ThemeContext.js'
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
@@ -10,7 +9,7 @@ export function ThemeToggle() {
     <Button
       variant="outline"
       size="icon"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       <Sun className="h-[1.2rem] w-[1.2rem] transition-all dark:hidden" />
       <Moon className="h-[1.2rem] w-[1.2rem] hidden dark:block" />
