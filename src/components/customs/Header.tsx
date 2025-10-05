@@ -21,7 +21,7 @@ const Header = () => {
     { id: 'bidboard', label: 'Bidboard', icon: <Trophy size={22} />, href: '/bidlisting' },
     { id: 'lotmatch', label: 'Lotmatch', icon: <Scale size={22} />, href: '/lotmatch' },
     { id: 'about', label: 'About', icon: <FcAbout size={22} />, href: '/about' },
-    // { id: 'others', label: 'Others', icon: <Ellipsis size={22} />, href: '/others' },
+    { id: 'others', label: 'Others', icon: <Ellipsis size={22} />, href: '/others' },
   ]
   return (
     <>

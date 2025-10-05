@@ -1,4 +1,4 @@
-import api from '../client'
+import api from '../client.js'
 
 export const getAllAuctions = () => api.get('/auctions')
 export const getAuctionById = (id) => api.get(`/auctions/${id}`)
