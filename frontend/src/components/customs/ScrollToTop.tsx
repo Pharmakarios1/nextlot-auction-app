@@ -27,7 +27,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 bg-gradient cursor-pointer animate-pulse text-white p-3 rounded-full shadow-lg transition"
+      className="fixed bottom-28 right-6 bg-gradient cursor-pointer animate-pulse text-white p-3 rounded-full shadow-lg transition"
       aria-label="Back to top"
     >
       <ArrowUp size={20} />

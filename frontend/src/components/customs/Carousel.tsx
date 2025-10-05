@@ -1,5 +1,6 @@
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel.js'
 import Autoplay from 'embla-carousel-autoplay'
+import { Card } from '../ui/card.js'
 
 const CustomCarousel = () => {
   const AuctoCarousel = [
@@ -35,12 +36,12 @@ const CustomCarousel = () => {
       }}
       plugins={[Autoplay({ delay: 5000 })]}
       orientation="vertical"
-      className="w-full mx-auto max-w-[768px]  px-5 "
+      className="w-full mx-auto max-w-[768px]  lg:px-5 flex flex-wrap "
     >
       <CarouselContent className="max-h-48  text-center">
         {AuctoCarousel.map((_, index) => (
           <CarouselItem key={index} className=" md:basis-[50%]">
-            <div className="">
+            <Card className="border-0 dark:bg-transparent shadow-none">
               <div className="border-none shadow-none outline-0">
                 <div className="flex items-center justify-center px-3 pb-4 ">
                   <h1 className=" text-5xl  md:text-7xl  font-body font-bold text-gradient">
@@ -49,7 +50,7 @@ const CustomCarousel = () => {
                   </h1>
                 </div>
               </div>
-            </div>
+            </Card>
           </CarouselItem>
         ))}
       </CarouselContent>

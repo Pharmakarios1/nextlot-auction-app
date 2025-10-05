@@ -5,7 +5,7 @@ import About from './pages/About.js'
 import Bidboard from './pages/BidPage/index.js'
 import Login from './pages/Auth/Login.js'
 import Signup from './pages/Auth/Signup.js'
-import Dashboard from './pages/UserDashboard/index.js'
+import Dashboard, { Others } from './pages/UserDashboard/index.js'
 import { SignedIn, SignedOut } from '@clerk/clerk-react'
 import BidDetailPage from './pages/BidPage/_partials/BidDetailPage/Index.js'
 import PlaceBid from './pages/BidPage/_partials/PlaceBid/PlaceBid.js'
@@ -18,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'about', element: <About /> },
+      { path: 'others', element: <Others /> },
       { path: '/bidlisting', element: <Bidboard /> },
       {
         path: '/bidlisting/:id',

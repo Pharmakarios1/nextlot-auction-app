@@ -1,5 +1,12 @@
 import { UserButton } from '@clerk/clerk-react'
-import React from 'react'
+
+export function Others() {
+  return (
+    <div className="inset-0 ">
+      <h1>COmponents</h1>
+    </div>
+  )
+}
 
 const Dashboard = () => {
   return (

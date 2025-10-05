@@ -31,7 +31,7 @@ export default function BidListing() {
 
   filteredBids = isHome ? filteredBids.slice(0, 4) : filteredBids.slice(0, 8)
   return (
-    <div className="py-12">
+    <div className="py-12 ">
       {/* Header */}
       <div className="flex text-center flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 ">
         <h1 className={` text-2xl md:3xl  font-bold text-shadow-cyan-400`}>
@@ -58,17 +58,18 @@ export default function BidListing() {
       </div>
 
       {/* Grid of BidCards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-2.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-2.5 place-items-center">
         {filteredBids.map((bid, i) => (
           <BidCard key={i} {...bid} />
         ))}
       </div>
+      {/* more button */}
       <div className={`my-5 justify-center flex md:justify-end `}>
         {isHome && (
           <CustomButton text="More!" link="/bidlisting" className="bg-gradient px-6 py-0" />
         )}
       </div>
-
+      {/* pagination */}
       <div className={`my-10`}>
         {isHome ? null : (
           <Pagination>

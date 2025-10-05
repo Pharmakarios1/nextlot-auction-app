@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 //react-icons
 import { FiUser } from 'react-icons/fi'
 import { SiHandshakeProtocol } from 'react-icons/si'
-import { Home, Scale, Trophy } from 'lucide-react'
+import { Ellipsis, Home, Scale, Trophy, User } from 'lucide-react'
 import { FcAbout } from 'react-icons/fc'
 //third party library
 import { cn } from '@/lib/utils.js'
@@ -14,12 +14,14 @@ import useHome from '@/hooks/useHome.js'
 const Header = () => {
   const [active, setActive] = useState('home')
   const isHome = useHome()
+  const isAuthenticated = true
 
   const tabs = [
     { id: 'home', label: 'Home', icon: <Home size={22} />, href: '/' },
-    { id: 'about', label: 'About', icon: <FcAbout size={22} />, href: '/about' },
     { id: 'bidboard', label: 'Bidboard', icon: <Trophy size={22} />, href: '/bidlisting' },
     { id: 'lotmatch', label: 'Lotmatch', icon: <Scale size={22} />, href: '/lotmatch' },
+    { id: 'about', label: 'About', icon: <FcAbout size={22} />, href: '/about' },
+    // { id: 'others', label: 'Others', icon: <Ellipsis size={22} />, href: '/others' },
   ]
   return (
     <>
@@ -80,6 +82,7 @@ const Header = () => {
               </NavLink>
             </li>
           ))}
+          {/* {isAuthenticated && <Button variant='ghost' className='cursor-pointer flex flex-col gap-0 text-[10px] text-gray-500 '> <User size={22} />Other</Button>} */}
         </ul>
       </footer>
     </>

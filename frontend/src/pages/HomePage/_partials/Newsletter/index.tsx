@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Input } from '@/components/ui/input.js'
+import { Button } from '@/components/ui/button.js'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card.js'
 import { CheckCircle2 } from 'lucide-react'
 import CustomButton from '@/components/customs/CustomButton.js'
 
@@ -33,9 +33,9 @@ export default function NewsletterSignup() {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="text-black"
+              className="text-white"
             />
-            <Button type="submit" className="w-full bg-gradient">
+            <Button type="submit" className="w-full bg-gradient cursor-pointer">
               Subscribe
             </Button>
           </form>

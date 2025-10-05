@@ -42,10 +42,7 @@ export default function HowItWorksTabs() {
     <div className="max-w-4xl mx-auto px-6 mb-10">
       <h2 className="text-3xl font-bold text-center mb-10 text-gradient">How It Works</h2>
 
-      {/* Step progress indicator */}
-      <div className="text-center mb-2 text-gray-600 dark:text-gray-300">
-        Step {currentIndex} of {steps.length}
-      </div>
+      
 
       {/* Progress Bar */}
       <div className="w-full bg-gray-200 dark:bg-slate-700 h-2 rounded-full mb-6">
@@ -56,9 +53,9 @@ export default function HowItWorksTabs() {
           transition={{ duration: 0.4 }}
         />
       </div>
-
-      <Tabs defaultValue="browse" className="w-full " onValueChange={(val) => setActiveTab(val)}>
-        <TabsList className="grid grid-cols-2 h-fit  md:grid-cols-4 gap-2 w-full md:w-fit p-5  ">
+      {/* Tab menu */}
+      <Tabs defaultValue="browse" className="w-full" onValueChange={(val) => setActiveTab(val)}>
+        <TabsList className="grid grid-cols-2 h-fit  md:grid-cols-4 gap-2 w-full  p-5  ">
           {steps.map((step) => (
             <TabsTrigger key={step.value} value={step.value} className="">
               {step.icon}
@@ -74,7 +71,7 @@ export default function HowItWorksTabs() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="mt-6 p-6 rounded-lg bg-white shadow-md dark:bg-slate-800"
+              className="mt-6 p-6 rounded-lg bg-white shadow-md dark:bg-slate-800 border-[1px]"
             >
               <h3 className="text-xl font-semibold mb-4 flex items-center">
                 {step.icon} {step.title}

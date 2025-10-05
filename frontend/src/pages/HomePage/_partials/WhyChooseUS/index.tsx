@@ -38,13 +38,13 @@ export default function WhyChooseUs() {
           {usps.map((usp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 1 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * .5 }}
+              // viewport={{ once: true }}
               className="flex flex-col items-center text-center p-6 rounded-xl shadow-sm bg-gray-50 dark:bg-slate-800 hover:shadow-md transition"
             >
-              <div className="mb-4">{usp.icon}</div>
+              <div className="mb-3">{usp.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{usp.title}</h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm text-left md:text-center">
                 {usp.description}

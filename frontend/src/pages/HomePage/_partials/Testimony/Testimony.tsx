@@ -10,7 +10,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel'
+} from '@/components/ui/carousel.js'
 
 const testimonials = [
   {
@@ -66,7 +66,7 @@ export default function TestimonialsCarousel() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="bg-white dark:bg-slate-800 shadow-lg rounded-xl p-8 flex flex-col items-center text-center mx-4"
+                  className="bg-white dark:bg-slate-800 shadow-lg rounded-xl p-8 flex flex-col items-center text-center max-w-[500px] mx-auto"
                 >
                   <img
                     src={t.photo}

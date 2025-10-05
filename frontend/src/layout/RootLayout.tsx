@@ -14,7 +14,7 @@ const RootLayout = () => {
         <ScrollToTop />
         <Outlet />
       </main>
-      <ScrollRestoration/>
+      <ScrollRestoration />
       <Footer />
     </>
   )
