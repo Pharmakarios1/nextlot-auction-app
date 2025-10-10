@@ -74,7 +74,7 @@ export default function HowItWorksTabs() {
               <h3 className="text-xl font-semibold mb-4 flex items-center">
                 {step.icon} {step.title}
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-gradient">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
                 {step.description}
               </p>
             </motion.div>
