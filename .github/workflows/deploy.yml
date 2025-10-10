@@ -2,10 +2,10 @@ name: React App CI/CD
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
-  contents: write  # ✅ allows pushing to gh-pages branch
+  contents: write # ✅ allows pushing to gh-pages branch
 
 jobs:
   build-and-deploy:
@@ -30,4 +30,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # or ./build if using CRA
+          publish_dir: ./dist 

@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.js'
 import { ThemeProvider } from './context/Theme/ThemeContext.js'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { AuthProvider } from './context/Auth/AuthContext.js'
 
 const queryClient = new QueryClient()
 
@@ -19,7 +20,9 @@ createRoot(document.getElementById('root')).render(
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-          <App />
+          <AuthProvider>
+            <App />
+          </AuthProvider>
         </ClerkProvider>
       </ThemeProvider>
     </QueryClientProvider>

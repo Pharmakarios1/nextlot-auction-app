@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * .5 }}
+              transition={{ duration: 0.5, delay: index * 0.5 }}
               // viewport={{ once: true }}
               className="flex flex-col items-center text-center p-6 rounded-xl shadow-sm bg-gray-50 dark:bg-slate-800 hover:shadow-md transition"
             >

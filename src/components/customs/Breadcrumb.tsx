@@ -16,9 +16,7 @@ export default function Breadcrumbs() {
 
   return (
     <Breadcrumb
-      className={`${
-        isHome ? 'bg-none' : 'bg-slate-950'
-      } w-fit p-1 rounded-md my-10 text-white`}
+      className={`${isHome ? 'bg-none' : 'bg-slate-950'} w-fit p-1 rounded-md my-10 text-white`}
     >
       <BreadcrumbList>
         {!isHome && (
@@ -44,9 +42,7 @@ export default function Breadcrumbs() {
             <React.Fragment key={to}>
               <BreadcrumbItem key={to}>
                 {isLast ? (
-                  <BreadcrumbPage className="capitalize text-white">
-                    {segment}
-                  </BreadcrumbPage>
+                  <BreadcrumbPage className="capitalize text-white">{segment}</BreadcrumbPage>
                 ) : (
                   <BreadcrumbLink asChild>
                     <Link to={to} className="capitalize text-white">

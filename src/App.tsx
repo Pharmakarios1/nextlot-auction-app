@@ -32,27 +32,26 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: (
-          <SignedOut>
-            {' '}
+         
+         
             <Login />
-          </SignedOut>
+         
         ),
       },
       {
         path: '/signup',
         element: (
-          <SignedOut>
+        
             <Signup />
-          </SignedOut>
+         
         ),
       },
       {
         path: '/dashboard',
         element: (
-          <SignedIn>
-            {' '}
+        
             <Dashboard />
-          </SignedIn>
+         
         ),
       },
     ],

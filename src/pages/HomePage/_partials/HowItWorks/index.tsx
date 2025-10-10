@@ -42,8 +42,6 @@ export default function HowItWorksTabs() {
     <div className="max-w-4xl mx-auto px-6 mb-10">
       <h2 className="text-3xl font-bold text-center mb-10 text-gradient">How It Works</h2>
 
-      
-
       {/* Progress Bar */}
       <div className="w-full bg-gray-200 dark:bg-slate-700 h-2 rounded-full mb-6">
         <motion.div

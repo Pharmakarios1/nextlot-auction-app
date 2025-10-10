@@ -1,20 +1,27 @@
-import { UserButton } from '@clerk/clerk-react'
+import { useEffect, useState } from "react";
+import { getCurrentUser } from "@/api/endpoints/auth.js";
 
-export function Others() {
+export default function Dashboard() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    getCurrentUser().then(setUser).catch(() => {
+      window.location.href = "/login";
+    });
+  }, []);
+
+  if (!user) return <p>Loading...</p>;
+
   return (
-    <div className="inset-0 ">
-      <h1>COmponents</h1>
+    <div className="p-5">
+      <h2 className="text-xl font-semibold">
+        Welcome, {user.username} ({user.role})
+      </h2>
     </div>
-  )
+  );
 }
 
-const Dashboard = () => {
-  return (
-    <div>
-      Dashboard
-      <UserButton userProfileUrl="/profile" />
-    </div>
-  )
-}
 
-export default Dashboard
+export  function Others(){
+  return<h2> hello</h2>
+}
