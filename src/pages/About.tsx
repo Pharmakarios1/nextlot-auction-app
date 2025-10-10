@@ -1,10 +1,11 @@
 import { Button } from '@/components/ui/button.js'
 import { Card, CardContent } from '@/components/ui/card.js'
 import { CheckCircle, Search, Gavel, Trophy, ShoppingCart } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
+
 
 // Reusable fade-in variant
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i = 1) => ({
     opacity: 1,

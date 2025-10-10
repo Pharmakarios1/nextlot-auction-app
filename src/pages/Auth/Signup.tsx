@@ -1,9 +1,8 @@
-import { SignUp } from '@clerk/clerk-react'
+import React from 'react'
+
 const Signup = () => {
   return (
-    <div className="flex place-content-center mx-auto my-10">
-      <SignUp signInUrl="/login" forceRedirectUrl="/dashboard" />
-    </div>
+    <div>Signup</div>
   )
 }
 

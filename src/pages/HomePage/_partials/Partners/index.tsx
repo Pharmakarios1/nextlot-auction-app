@@ -25,7 +25,7 @@ export default function PartnersCarousel() {
           animate={{ x: ['0%', '-100%'] }}
           transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
         >
-          {/* Duplicate logos twice for seamless loop */}
+       
           {[...partners, ...partners, ...partners].map((partner, i) => (
             <div key={i} className="flex-shrink-0 flex justify-center items-center w-40 h-10">
               <img
