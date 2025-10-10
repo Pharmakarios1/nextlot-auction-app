@@ -4,7 +4,7 @@ import CustomButton from './CustomButton.js'
 const Hero = () => {
   return (
     <div className=" max-w-full sm:max-w-2/3 md:max-w-1/2 mx-auto my-16 md:my-0 ">
-      <p className="text-md sm:text-xl md:text-2xl text-center text-gray-600 font-inter my-10 md:my-0 ">
+      <p className="text-sm sm:text-xl md:text-2xl text-center text-gray-600 font-inter my-10 md:my-0 dark:text-white">
         Nextlot is the future of digital auctions, merging technology, transparency, and trust into
         every bidding experience worldwide.
       </p>
