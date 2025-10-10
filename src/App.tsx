@@ -30,28 +30,15 @@ const router = createBrowserRouter([
       { path: '/lotmatch', element: <LotMatch /> },
       {
         path: '/login',
-        element: (
-         
-         
-            <Login />
-         
-        ),
+        element: <Login />,
       },
       {
         path: '/signup',
-        element: (
-        
-            <Signup />
-         
-        ),
+        element: <Signup />,
       },
       {
         path: '/dashboard',
-        element: (
-        
-            <Dashboard />
-         
-        ),
+        element: <Dashboard />,
       },
     ],
   },

@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card.js'
 import { CheckCircle, Search, Gavel, Trophy, ShoppingCart } from 'lucide-react'
 import { motion, type Variants } from 'framer-motion'
 
-
 // Reusable fade-in variant
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },

@@ -1,31 +1,30 @@
-import { useState } from "react";
-import { login } from "@/api/endpoints/auth.js";
-import { useAuth } from "@/context/Auth/AuthContext.js";
+import { useState } from 'react'
+import { login } from '@/api/endpoints/auth.js'
+import { useAuth } from '@/context/Auth/AuthContext.js'
 
 export default function Login() {
-  const { setUser } = useAuth();
-  const [form, setForm] = useState({ username: "", password: "" });
-  const [error, setError] = useState("");
+  const { setUser } = useAuth()
+  const [form, setForm] = useState({ username: '', password: '' })
+  const [error, setError] = useState('')
 
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      await login(form.username, form.password);
-      const userRes = await fetch("http://127.0.0.1:8000/users/me", {
+      await login(form.username, form.password)
+      const userRes = await fetch('http://127.0.0.1:8000/users/me', {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
-      });
-      const user = await userRes.json();
-      setUser(user);
-      window.location.href = "/dashboard";
+      })
+      const user = await userRes.json()
+      setUser(user)
+      window.location.href = '/dashboard'
     } catch (err) {
-      setError("Invalid username or password");
+      setError('Invalid username or password')
     }
-  };
+  }
 
   return (
     <div className="max-w-sm mx-auto mt-20">
@@ -52,5 +51,5 @@ export default function Login() {
         {error && <p className="text-red-500">{error}</p>}
       </form>
     </div>
-  );
+  )
 }

@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
-import { getCurrentUser } from "@/api/endpoints/auth.js";
+import { useEffect, useState } from 'react'
+import { getCurrentUser } from '@/api/endpoints/auth.js'
 
 export default function Dashboard() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
-    getCurrentUser().then(setUser).catch(() => {
-      window.location.href = "/login";
-    });
-  }, []);
+    getCurrentUser()
+      .then(setUser)
+      .catch(() => {
+        window.location.href = '/login'
+      })
+  }, [])
 
-  if (!user) return <p>Loading...</p>;
+  if (!user) return <p>Loading...</p>
 
   return (
     <div className="p-5">
@@ -18,10 +20,9 @@ export default function Dashboard() {
         Welcome, {user.username} ({user.role})
       </h2>
     </div>
-  );
+  )
 }
 
-
-export  function Others(){
-  return<h2> hello</h2>
+export function Others() {
+  return <h2> hello</h2>
 }
