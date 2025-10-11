@@ -1,5 +1,5 @@
 import { ArrowRight, Scale } from 'lucide-react'
-import CustomButton from './CustomButton.js'
+import CustomButton from '@/components/customs/CustomButton.js'
 
 const Hero = () => {
   return (

@@ -1,5 +1,5 @@
 import CustomCarousel from '@/components/customs/Carousel.js'
-import Hero from '@/components/customs/Hero.js'
+import Hero from '../HomePage/_partials/Hero/index.js'
 import BidsPage from '../BidPage/_partials/BidListing/index.js'
 import HowItWorksTabs from './_partials/HowItWorks/index.js'
 import WhyChooseUs from './_partials/WhyChooseUS/index.js'

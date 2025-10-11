@@ -9,6 +9,8 @@ import Dashboard, { Others } from './pages/UserDashboard/index.js'
 import BidDetailPage from './pages/BidPage/_partials/BidDetailPage/Index.js'
 import PlaceBid from './pages/BidPage/_partials/PlaceBid/PlaceBid.js'
 import LotMatch from './pages/LotMatch/index.js'
+import ResetPassword from './pages/Auth/ResetPassword.js'
+import ResetPasswordRedirect from './pages/Auth/ResetPasswordRedirect.js'
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login />,
+      },
+      {
+        path: '/reset-password',
+        element: <ResetPassword />,
+      },
+      {
+        path: '/reset-password-redirect',
+        element: <ResetPasswordRedirect />,
       },
       {
         path: '/signup',

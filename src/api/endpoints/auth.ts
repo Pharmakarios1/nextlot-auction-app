@@ -1,12 +1,13 @@
 import api from '../client.js'
 
 export const login = async (email, password) => {
-  const res = await api.post('/login', { email, password })
+  const res = await api.post('/auth/login', { email, password })
   localStorage.setItem('token', res.data.access_token)
   return res.data
 }
 
-export const register = (data) => api.post('/register', data)
+export const register = (data) => api.post('/auth/register', data)
+export const resetpassword = (data) => api.post('/auth/resetpassword', data)
 
 export const logout = () => api.post('/auth/logout')
 
